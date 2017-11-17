@@ -23,7 +23,7 @@ https://github.com/joonaleppalahti/CCM
 
 Asensin master ja orja koneelle SALTin
 
-`sudo apt-get -y install salt-master
+`sudo apt-get -y install salt-master  
 sudo apt-get -y install salt-minion`
 
 Vaihdoin molemmille koneille nimet: Master ja Orja
@@ -34,14 +34,16 @@ Tämä ei saltin kohdalla käsittääkseni ole millään tavalla vaadittua, kosk
 Sekä myös /etc/hosts kansioon, jotta järjestelmä ei lähde etsimään nimiä verkon ulkopuolelta.
 
 `sudoedit /etc/hosts`
+
 `127.0.1.1 xubuntu master-eino`
 
-`127.0.1.1 xubuntu orja-eino
+`127.0.1.1 xubuntu orja-eino  
 172.28.171.161 master-eino`
 
 Lisäsin minionille saltin asetuksiin masterin. Tiedosto on pelkkää kommenttia, paikalla ei väliä.
 
 `sudoedit /etc/salt/minion`
+
 `master: 172.28.171.161`
 
 Käynnistin molemmat palvelut uusiksi
