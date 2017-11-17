@@ -171,13 +171,13 @@ Lisäsin masterilla `/etc/ansible/hosts` tiedostoon ryhmän test, sekä orjan ii
 Lisäsin minionille masterin julkisen avaimen
 
 `
-xubuntu@orja-eino:~$ ssh-keygen -t rsa
-Generating public/private rsa key pair.
-Enter file in which to save the key (/home/xubuntu/.ssh/id_rsa): ssh-copy-id xubuntu@172.28.171.161
-Enter passphrase (empty for no passphrase): 
-Enter same passphrase again: 
-Your identification has been saved in ssh-copy-id xubuntu@172.28.171.161.
-Your public key has been saved in ssh-copy-id xubuntu@172.28.171.161.pub.
+xubuntu@orja-eino:~$ ssh-keygen -t rsa  
+Generating public/private rsa key pair.  
+Enter file in which to save the key (/home/xubuntu/.ssh/id_rsa): ssh-copy-id xubuntu@172.28.171.161  
+Enter passphrase (empty for no passphrase):   
+Enter same passphrase again:   
+Your identification has been saved in ssh-copy-id xubuntu@172.28.171.161.  
+Your public key has been saved in ssh-copy-id xubuntu@172.28.171.161.pub.  
 The key fingerprint is:
 SHA256:e5EIopECKMlETWC7ku4sWlPm1dVtTTGreJoAkVLybfM xubuntu@orja-eino
 The key's randomart image is:
