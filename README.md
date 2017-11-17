@@ -71,7 +71,7 @@ yKey for minion xubuntu accepted.
 
 Kokeilin pingata orjaa, josta syöte:
 
-`
+```
 xubuntu@master-eino:~$ sudo salt xubuntu test.ping
 [WARNING ] Key 'file_ignore_glob' with value None has an invalid type of NoneType, a list is required for this value
 [WARNING ] Key 'file_ignore_glob' with value None has an invalid type of NoneType, a list is required for this value
@@ -79,7 +79,7 @@ xubuntu@master-eino:~$ sudo salt xubuntu test.ping
 [WARNING ] Key 'file_ignore_glob' with value None has an invalid type of NoneType, a list is required for this value
 xubuntu:
     True
-`
+```
 
 Kokeilin vielä asentaa apachen orjalle masterin kautta.
 
