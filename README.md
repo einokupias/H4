@@ -181,16 +181,16 @@ Your public key has been saved in ssh-copy-id xubuntu@172.28.171.161.pub.
 The key fingerprint is:
 SHA256:e5EIopECKMlETWC7ku4sWlPm1dVtTTGreJoAkVLybfM xubuntu@orja-eino
 The key's randomart image is:
-+---[RSA 2048]----+
-|**+. ..o.      oo|
-|*..o .o.o  . . oo|
-|o.o . oo +. . o..|
-| o.o . oooo....  |
-|o.. o . S.oE o   |
-|o  + .   ...+    |
-| .o .   . .o     |
-|+. .     .       |
-|+o               |
-+----[SHA256]-----+
++---[RSA 2048]----+  
+|**+. ..o.      oo|  
+|*..o .o.o  . . oo|  
+|o.o . oo +. . o..|  
+| o.o . oooo....  |  
+|o.. o . S.oE o   |  
+|o  + .   ...+    |  
+| .o .   . .o     |  
+|+. .     .       |  
+|+o               |  
++----[SHA256]-----+  
 `
 
