@@ -83,7 +83,7 @@ xubuntu:
 
 Kokeilin vielä asentaa apachen orjalle masterin kautta.
 
-`
+```
 xubuntu@master-eino:~$ sudo salt xubuntu pkg.install apache2
 [WARNING ] Key 'file_ignore_glob' with value None has an invalid type of NoneType, a list is required for this value
 [WARNING ] Key 'file_ignore_glob' with value None has an invalid type of NoneType, a list is required for this value
@@ -151,7 +151,7 @@ xubuntu:
         new:
             5.1.5-8ubuntu1
         old:
-`
+```
 
 Nyt syöttäessäni urliin "localhost", avautui apachen testisivu.
 
@@ -170,7 +170,7 @@ Lisäsin masterilla `/etc/ansible/hosts` tiedostoon ryhmän test, sekä orjan ii
 
 Lisäsin minionille masterin julkisen avaimen
 
-`
+```
 xubuntu@orja-eino:~$ ssh-keygen -t rsa  
 Generating public/private rsa key pair.  
 Enter file in which to save the key (/home/xubuntu/.ssh/id_rsa): ssh-copy-id xubuntu@172.28.171.161  
@@ -188,9 +188,9 @@ The key's randomart image is:
 | o.o . oooo....  |  
 |o.. o . S.oE o   |  
 |o  + .   ...+    |  
-| .o .   . .o     |  
-|+. .     .       |  
-|+o               |  
-+----[SHA256]-----+  
-`
+| .o .   . .o     |
+|+. .     .       |
+|+o               |
++----[SHA256]-----+
+```
 
