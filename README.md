@@ -56,7 +56,8 @@ master.pem:  e0:3e:28:c4:3a:32:57:ba:9c:14:13:fc:bc:ac:95:c4
 master.pub:  ca:68:20:04:a3:ea:f5:1f:f5:89:09:d8:e7:fc:69:f3
 Unaccepted Keys:
 xubuntu:  16:66:a3:19:35:3c:1b:b0:78:61:05:e3:ea:f5:de:c4
-`
+`  
+
 Hyväksyin avaimen komennolla
 
 `
