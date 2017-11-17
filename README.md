@@ -160,6 +160,13 @@ Asensin masterille Ansiblen ja ssh, sekä orjalle ssh
 
 `sudo apt-get -y install ansible ssh`
 
+Lisäsin masterilla `/etc/ansible/hosts` tiedostoon ryhmän test, sekä orjan iipparin
+
+`
+[test]
+172.28.171.18
+`
+
 Lisäsin minionille masterin julkisen avaimen
 
 `
