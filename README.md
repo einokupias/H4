@@ -195,4 +195,29 @@ The key's randomart image is:
 |+o               |
 +----[SHA256]-----+
 ```
+Pingasin minionia
+
+```
+xubuntu@master-eino:~$ ansible test -m ping
+172.28.171.18 | UNREACHABLE! => {
+    "changed": false, 
+    "msg": "ERROR! SSH encountered an unknown error during the connection. We recommend you re-run the command using -vvvv, which will enable SSH debugging output to help diagnose the issue", 
+    "unreachable": true
+}
+```
+
+Pelkkä ping komento kuitenkin toimii
+
+```
+xubuntu@master-eino:~$ ping 172.28.171.18
+PING 172.28.171.18 (172.28.171.18) 56(84) bytes of data.
+64 bytes from 172.28.171.18: icmp_seq=1 ttl=64 time=0.465 ms
+64 bytes from 172.28.171.18: icmp_seq=2 ttl=64 time=0.553 ms
+64 bytes from 172.28.171.18: icmp_seq=3 ttl=64 time=0.463 ms
+64 bytes from 172.28.171.18: icmp_seq=4 ttl=64 time=0.530 ms
+^C
+--- 172.28.171.18 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3050ms
+rtt min/avg/max/mdev = 0.463/0.502/0.553/0.048 ms
+```
 
