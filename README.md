@@ -173,51 +173,47 @@ Lisäsin masterilla `/etc/ansible/hosts` tiedostoon ryhmän test, sekä orjan ii
 Lisäsin minionille masterin julkisen avaimen
 
 ```
-xubuntu@orja-eino:~$ ssh-keygen -t rsa  
-Generating public/private rsa key pair.  
-Enter file in which to save the key (/home/xubuntu/.ssh/id_rsa): ssh-copy-id xubuntu@172.28.171.161  
-Enter passphrase (empty for no passphrase):   
-Enter same passphrase again:   
-Your identification has been saved in ssh-copy-id xubuntu@172.28.171.161.  
-Your public key has been saved in ssh-copy-id xubuntu@172.28.171.161.pub.  
+xubuntu@orja-eino:~$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/xubuntu/.ssh/id_rsa): /home/xubuntu/.ssh/id_rsa
+Created directory '/home/xubuntu/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/xubuntu/.ssh/id_rsa.
+Your public key has been saved in /home/xubuntu/.ssh/id_rsa.pub.
 The key fingerprint is:
-SHA256:e5EIopECKMlETWC7ku4sWlPm1dVtTTGreJoAkVLybfM xubuntu@orja-eino
+SHA256:Kp/2VRCntxVI7bNOxuRSEljWSBtkvhHQ+bfdExk7jLM xubuntu@orja-eino
 The key's randomart image is:
-+---[RSA 2048]----+  
-|**+. ..o.      oo|  
-|*..o .o.o  . . oo|  
-|o.o . oo +. . o..|  
-| o.o . oooo....  |  
-|o.. o . S.oE o   |  
-|o  + .   ...+    |  
-| .o .   . .o     |
-|+. .     .       |
-|+o               |
++---[RSA 2048]----+
+|          oO@*.  |
+|          .B*+oo |
+|          o =++ +|
+|           o.B**.|
+|        S   +*o+*|
+|       .   ..E*oo|
+|    . .   .  =  .|
+|     o.. .    .  |
+|     .o..        |
 +----[SHA256]-----+
 ```
-Pingasin minionia
-
 ```
-xubuntu@master-eino:~$ ansible test -m ping
-172.28.171.18 | UNREACHABLE! => {
-    "changed": false, 
-    "msg": "ERROR! SSH encountered an unknown error during the connection. We recommend you re-run the command using -vvvv, which will enable SSH debugging output to help diagnose the issue", 
-    "unreachable": true
-}
-```
+xubuntu@orja-eino:~$ ssh-copy-id xubuntu@172.28.171.161
+The authenticity of host '172.28.171.161 (172.28.171.161)' can't be established.
+ECDSA key fingerprint is SHA256:E4ka15mU1hJBFhk89h/hap76Xksyp8aW9IbzPYJH/e4.
+Are you sure you want to continue connecting (yes/no)? yes
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted now it is to install the new keys
+xubuntu@172.28.171.161's password: 
+Permission denied, please try again.
+xubuntu@172.28.171.161's password: 
+Permission denied, please try again.
+xubuntu@172.28.171.161's password: 
 
-Pelkkä ping komento kuitenkin toimii
+Number of key(s) added: 1
 
-```
-xubuntu@master-eino:~$ ping 172.28.171.18
-PING 172.28.171.18 (172.28.171.18) 56(84) bytes of data.
-64 bytes from 172.28.171.18: icmp_seq=1 ttl=64 time=0.465 ms
-64 bytes from 172.28.171.18: icmp_seq=2 ttl=64 time=0.553 ms
-64 bytes from 172.28.171.18: icmp_seq=3 ttl=64 time=0.463 ms
-64 bytes from 172.28.171.18: icmp_seq=4 ttl=64 time=0.530 ms
-^C
---- 172.28.171.18 ping statistics ---
-4 packets transmitted, 4 received, 0% packet loss, time 3050ms
-rtt min/avg/max/mdev = 0.463/0.502/0.553/0.048 ms
+Now try logging into the machine, with:   "ssh 'xubuntu@172.28.171.161'"
+and check to make sure that only the key(s) you wanted were added.
+
+xubuntu@orja-eino:~$ 
 ```
 
